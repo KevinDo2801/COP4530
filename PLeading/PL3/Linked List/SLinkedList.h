@@ -25,7 +25,13 @@ private:
 };
 
 // default constructor
-template <typename E> SLinkedList<E>::SLinkedList() : head(nullptr) {}
+// template <typename E> SLinkedList<E>::SLinkedList() : head(nullptr) {}
+template <typename E>
+SLinkedList<E>::SLinkedList() {
+  head = nullptr; // Initialize the head pointer to nullptr
+  nElem = 0;      // Initialize the size of the list to 0 (if needed)
+}
+
 
 // returns whether the linked list is empty or not
 template <typename E> bool SLinkedList<E>::empty() const {
